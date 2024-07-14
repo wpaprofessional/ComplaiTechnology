@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link class="ico" rel="shortcut icon" href="./img/Logo.ico" type="image/x-icon">
+    <title>Complai Desenvolvedora de Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script rel="stylesheet" src="reveal.js" defer></script>
+    <script src="menu.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="interface fixed">
+            <div class="logo">
+                <a class="logo-link" href="index.html">
+                    <img class="logo-edit" src="./img/Logo.jpeg" alt="Logo Complai">
+                </a>
+            </div>
+
+            <div class="menu-mobile-title">
+                <h2>ComplAI</h2>
+            </div>
+
+            <nav class="menu-desktop">
+                <ul class="menu-ul">
+                    <li class="menu-li"><a class="menu-link" href="index.html">Inicio</a></li>
+                    <li class="menu-li"><a class="menu-link" href="servicos.html">Serviços</a></li>
+                    <li class="menu-li"><a class="menu-link" href="cooperadores.html">Cooperadores</a></li>
+                    <li class="menu-li"><a class="menu-link" href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a class="btn-link"
+                    href="https://api.whatsapp.com/send?phone=5542984405972&text=Ol%C3%A1,%20Gostaria%20de%20saber%20mais%20sobre%20a%20Complai!">
+                    <button class="btn-edit">Contato</button>
+                </a>
+            </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav class="menu-mobile-nav">
+                    <ul class="menu-mobile-ul">
+                        <li class="menu-mobile-li"><a class="menu-mobile-link" href="index.html">Início</a></li>
+                        <li class="menu-mobile-li"><a class="menu-mobile-link" href="servicos.html">Serviços</a></li>
+                        <li class="menu-mobile-li"><a class="menu-mobile-link" href="cooperadores.html">Cooperadores</a>
+                        </li>
+                        <li class="menu-mobile-li"><a class="menu-mobile-link" href="sobre.html">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site efeito-txt-topo">
+                        <h1 class="titulo-principal-edit">Transformando Ideias em Inovação</h1>
+                        <h2 class="subtitulo-principal-edit">Desenvolvendo o Futuro com Tecnologia</h2>
+                        <p class="txt-principal-edit">Bem-vindo à ComplAI, onde a excelência em desenvolvimento de
+                            software encontra a inovação. Fundada por estudantes apaixonados em 2017, evoluímos de
+                            suporte técnico para líderes em sistemas de IA empresarial.</p>
+
+                        <div class="btn-contato">
+                            <a class="btn-link" href="sobre.html">
+                                <button class="btn-edit">Descubra Mais</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-topo-site efeito-img-topo">
+                        <img class="img-edit" src="./img/Logo.jpeg" alt="Complai">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="especialidades">
+            <div class="interface">
+                <h1 class="titulo-edit">ESPECIALIDADES</h1>
+                <div class="flex">
+                    <div class="especialidades-box efeito-especialidades1">
+                        <i class="fas fa-code"></i>
+                        <h2 class="subtitulo-edit">Personalização</h2>
+                        <p class="txt-edit">Desenvolvemos software personalizado para atender às suas necessidades
+                            específicas.
+                        </p>
+                    </div>
+
+                    <div class="especialidades-box efeito-especialidades2">
+                        <i class="fas fa-brain"></i>
+                        <h2 class="subtitulo-edit">IA</h2>
+                        <p class="txt-edit">Oferecemos soluções de IA para automação e insights avançados.
+                        </p>
+                    </div>
+
+                    <div class="especialidades-box efeito-especialidades3">
+                        <i class="fas fa-laptop"></i>
+                        <h2 class="subtitulo-edit">Consultoria</h2>
+                        <p class="txt-edit">Orientamos estrategicamente o uso da tecnologia em seus negócios.</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="especialidades-box efeito-especialidades4">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h2 class="subtitulo-edit">Desenvolvimento</h2>
+                        <p class="txt-edit">Criamos sites e apps atraentes e funcionais para sua presença online.</p>
+                    </div>
+
+                    <div class="especialidades-box efeito-especialidades5">
+                        <i class="fas fa-code"></i>
+                        <h2 class="subtitulo-edit">Segurança</h2>
+                        <p class="txt-edit">Protegemos seus dados e sistemas contra ameaças cibernéticas.</p>
+                    </div>
+
+                    <div class="especialidades-box efeito-especialidades6">
+                        <i class="fas fa-cogs"></i>
+                        <h2 class="subtitulo-edit">Serviços de Inteligência Artificial</h2>
+                        <p class="txt-edit">Oferecemos uma ampla gama de serviços de inteligência artificial
+                            personalizados para atender às suas necessidades.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section class="portifolio">
+            <div class="interface">
+                <h1 class="titulo-edit">SERVIÇOS</h1>
+                <div class="flex">
+                    <a href="servicos.html#chatbot">
+                        <div class="img-port efeito-portifolio1" style="background-image: url(./img/Chat\ Bot.png);">
+                            <div class="overlay">CHAT BOT</div>
+                        </div>
+                    </a>
+                    <a href="servicos.html#software-personalizado">
+                        <div class="img-port efeito-portifolio2"
+                            style="background-image: url(./img/Softwares\ personalizados.png);">
+                            <div class="overlay">SOFTWARE PERSONALIZADOS</div>
+                        </div>
+                    </a>
+                    <a href="servicos.html#ia-e-marketing">
+                        <div class="img-port efeito-portifolio3"
+                            style="background-image: url(./img/ia\ e\ marketing.png);">
+                            <div class="overlay">IA E MARKETING</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <div class="interface">
+                <h2 class="titulo-edit">Fale Conosco</h2>
+                <form class="form" action="confirmacao.html">
+                    <input class="input-edit efeito-formulario1" type="text" name="" id=""
+                        placeholder="Seu nome completo:" required>
+                    <input class="input-edit efeito-formulario2" type="text" name="" id="" placeholder="Seu e-mail:"
+                        required>
+                    <input class="input-edit efeito-formulario3" type="text" name="" id="" placeholder="Seu celular:">
+                    <textarea class="textarea efeito-formulario4" name="" id="" placeholder="Sua mensagem"
+                        required></textarea>
+                    <div class="btn-enviar"><input class="input-btn efeito-formulario-btn" type="submit" value="ENVIAR">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img class="rodape-img-edit" src="./img/logo-rodape.png" alt="Logotipo Complai">
+                    </div>
+                    <div class="btn-social">
+                        <a class="rodape-a"
+                            href="https://www.instagram.com/compl_ai/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="><button
+                                class="btn-social-edit"><i class="bi bi-instagram"></i></button></a>
+                        <a class="rodape-a" href="https://youtube.com/@complAI-jpk55?si=9kk5pqxqst_q87gD"><button
+                                class="btn-social-edit"><i class="bi bi-youtube"></i></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="line-footer borda"></div>
+            <div class="copy">
+                <p>&copy; 2023 Complai. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
