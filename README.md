@@ -24,6 +24,6 @@ Este é meu primeiro projeto e estou fazendo tudo sozinho, utilizando o máximo 
 Para visualizar o projeto, basta clonar este repositório e abrir o arquivo `index.html` no seu navegador.
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/wpaprofessional/ComplaiTechnology.git
+cd ComplaiTechnology
 open index.html
