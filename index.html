@@ -1,217 +1,169 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="ico" rel="shortcut icon" href="./img/Logo.ico" type="image/x-icon">
-    <title>Complai Desenvolvedora de Software</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script rel="stylesheet" src="reveal.js" defer></script>
-    <script src="menu.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Feliz Aniversário 🎉</title>
+  <style>
+    :root{--bg:#fff;--card:#f7f9fc;--accent:#ff4d6d;--text:#0b1a2b}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Arial; background:linear-gradient(180deg,#ffe0e9 0%, #ffffff 100%);color:var(--text)}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{width:100%;max-width:980px;background:var(--card);border-radius:20px;box-shadow:0 12px 35px rgba(12,20,40,.1);padding:20px}
+    .center{display:flex;align-items:center;justify-content:center}
 
+    #startBtn{appearance:none;border:0;background:linear-gradient(90deg,var(--accent),#e6004c);color:#fff;padding:18px 28px;border-radius:14px;font-size:20px;font-weight:600;cursor:pointer;box-shadow:0 10px 25px rgba(255,77,109,.3);transition:.3s}
+    #startBtn:hover{transform:scale(1.05)}
+
+    #main{display:none;animation:fadeIn .5s ease both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+    header{display:flex;flex-direction:row;align-items:center;gap:16px}
+    .logo{width:84px;height:84px;border-radius:16px;background:linear-gradient(135deg,#ffe7f0,#ffd7a6);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px}
+    h1{margin:0;font-size:30px;color:var(--accent)}
+    p.lead{margin:6px 0 0;color:#334155;font-size:18px}
+
+    .text-block{background:#fff;padding:18px;border-radius:14px;margin-top:18px;line-height:1.6;font-size:18px}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:14px}
+    .gallery img{width:100%;height:100%;border-radius:12px;object-fit:cover;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+
+    .modal{position:fixed;inset:0;background:rgba(2,6,23,.6);display:none;align-items:center;justify-content:center;padding:18px}
+    .modal .inner{max-width:920px;width:100%;background:#fff;border-radius:12px;padding:14px}
+    .modal img{width:100%;height:auto;border-radius:8px}
+
+    footer{margin-top:18px;color:#475569;font-size:13px;text-align:center}
+
+    @media(min-width:720px){h1{font-size:36px}}
+
+    button:focus,input:focus{outline:3px solid rgba(255,77,109,.4);outline-offset:3px}
+    .large-text{font-size:20px}
+  </style>
 </head>
-
 <body>
+  <!-- VLibras -->
+  <div vw class="enabled"> <div vw-access-button class="vw-access-button"></div> <div vw-plugin-wrapper></div> </div>
 
-    <header class="cabecalho">
-        <div class="interface fixed">
-            <div class="logo">
-                <a class="logo-link" href="index.html">
-                    <img class="logo-edit" src="./img/Logo.jpeg" alt="Logo Complai">
-                </a>
-            </div>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="titulo">
 
-            <div class="menu-mobile-title">
-                <h2>ComplAI</h2>
-            </div>
+      <div id="intro" class="center" style="flex-direction:column;gap:14px">
+        <div class="logo" aria-hidden="true">🎂</div>
+        <button id="startBtn">Clique aqui</button>
+        <div style="font-size:13px;color:#475569">Toque no botão para abrir a surpresa.</div>
+      </div>
 
-            <nav class="menu-desktop">
-                <ul class="menu-ul">
-                    <li class="menu-li"><a class="menu-link" href="index.html">Inicio</a></li>
-                    <li class="menu-li"><a class="menu-link" href="servicos.html">Serviços</a></li>
-                    <li class="menu-li"><a class="menu-link" href="cooperadores.html">Cooperadores</a></li>
-                    <li class="menu-li"><a class="menu-link" href="sobre.html">Sobre</a></li>
-                </ul>
-            </nav>
+      <main id="main" aria-live="polite">
+        <header>
+          <div class="logo">🎉</div>
+          <div>
+            <h1 id="titulo">Feliz Aniversário, Giovanna!</h1>
+            <p class="lead">Este site é todo para você, feito com carinho.</p>
+          </div>
+        </header>
 
-            <div class="btn-contato">
-                <a class="btn-link"
-                    href="https://api.whatsapp.com/send?phone=5542984405972&text=Ol%C3%A1,%20Gostaria%20de%20saber%20mais%20sobre%20a%20Complai!">
-                    <button class="btn-edit">Contato</button>
-                </a>
-            </div>
-
-            <div class="btn-abrir-menu" id="btn-menu">
-                <i class="bi bi-list"></i>
-            </div>
-
-            <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-fechar">
-                    <i class="bi bi-x-lg"></i>
-                </div>
-
-                <nav class="menu-mobile-nav">
-                    <ul class="menu-mobile-ul">
-                        <li class="menu-mobile-li"><a class="menu-mobile-link" href="index.html">Início</a></li>
-                        <li class="menu-mobile-li"><a class="menu-mobile-link" href="servicos.html">Serviços</a></li>
-                        <li class="menu-mobile-li"><a class="menu-mobile-link" href="cooperadores.html">Cooperadores</a>
-                        </li>
-                        <li class="menu-mobile-li"><a class="menu-mobile-link" href="sobre.html">Sobre</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="overlay-menu" id="overlay-menu"></div>
-        </div>
-    </header>
-
-    <main class="principal">
-        <section class="topo-do-site">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-site efeito-txt-topo">
-                        <h1 class="titulo-principal-edit">Transformando Ideias em Inovação</h1>
-                        <h2 class="subtitulo-principal-edit">Desenvolvendo o Futuro com Tecnologia</h2>
-                        <p class="txt-principal-edit">Bem-vindo à ComplAI, onde a excelência em desenvolvimento de
-                            software encontra a inovação. Fundada por estudantes apaixonados em 2017, evoluímos de
-                            suporte técnico para líderes em sistemas de IA empresarial.</p>
-
-                        <div class="btn-contato">
-                            <a class="btn-link" href="sobre.html">
-                                <button class="btn-edit">Descubra Mais</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="img-topo-site efeito-img-topo">
-                        <img class="img-edit" src="./img/Logo.jpeg" alt="Complai">
-                    </div>
-                </div>
-            </div>
+        <section class="text-block large-text">
+          <p>Giovanna,</p>
+          <p>Hoje é um dia muito especial: o seu aniversário. Eu, Wesley, preparei este presente para que você sinta todo o carinho e a importância que tem na minha vida. Você é uma pessoa incrível, iluminada e merece tudo de melhor.</p>
+          <p>Obrigado pelos momentos que compartilhamos, pelas memórias que já temos e por todos os que ainda vamos viver. Desejo que sua vida seja cheia de alegrias, saúde e conquistas. Que cada novo ano traga ainda mais motivos para sorrir.</p>
+          <p>Parabéns, Giovanna! 💖</p>
+          <p>Com carinho,<br>Wesley</p>
         </section>
 
-        <section class="especialidades">
-            <div class="interface">
-                <h1 class="titulo-edit">ESPECIALIDADES</h1>
-                <div class="flex">
-                    <div class="especialidades-box efeito-especialidades1">
-                        <i class="fas fa-code"></i>
-                        <h2 class="subtitulo-edit">Personalização</h2>
-                        <p class="txt-edit">Desenvolvemos software personalizado para atender às suas necessidades
-                            específicas.
-                        </p>
-                    </div>
-
-                    <div class="especialidades-box efeito-especialidades2">
-                        <i class="fas fa-brain"></i>
-                        <h2 class="subtitulo-edit">IA</h2>
-                        <p class="txt-edit">Oferecemos soluções de IA para automação e insights avançados.
-                        </p>
-                    </div>
-
-                    <div class="especialidades-box efeito-especialidades3">
-                        <i class="fas fa-laptop"></i>
-                        <h2 class="subtitulo-edit">Consultoria</h2>
-                        <p class="txt-edit">Orientamos estrategicamente o uso da tecnologia em seus negócios.</p>
-                    </div>
-                </div>
-
-                <div class="flex">
-                    <div class="especialidades-box efeito-especialidades4">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h2 class="subtitulo-edit">Desenvolvimento</h2>
-                        <p class="txt-edit">Criamos sites e apps atraentes e funcionais para sua presença online.</p>
-                    </div>
-
-                    <div class="especialidades-box efeito-especialidades5">
-                        <i class="fas fa-code"></i>
-                        <h2 class="subtitulo-edit">Segurança</h2>
-                        <p class="txt-edit">Protegemos seus dados e sistemas contra ameaças cibernéticas.</p>
-                    </div>
-
-                    <div class="especialidades-box efeito-especialidades6">
-                        <i class="fas fa-cogs"></i>
-                        <h2 class="subtitulo-edit">Serviços de Inteligência Artificial</h2>
-                        <p class="txt-edit">Oferecemos uma ampla gama de serviços de inteligência artificial
-                            personalizados para atender às suas necessidades.</p>
-                    </div>
-                </div>
+        <section class="text-block">
+          <strong>Momentos Peak kkkk</strong>
+          <div class="gallery">
+            <!-- Adicione suas imagens aqui -->
+            <img src="./Peak 1.png" alt="Foto Especial">
+            <img src="./Peak 2.png" alt="Foto Especial">
+            <img src="./Peak 3.png" alt="Foto Especial">
+            <img src="./Peak 4.png" alt="Foto Especial">
+          </div>
         </section>
 
-        <section class="portifolio">
-            <div class="interface">
-                <h1 class="titulo-edit">SERVIÇOS</h1>
-                <div class="flex">
-                    <a href="servicos.html#chatbot">
-                        <div class="img-port efeito-portifolio1" style="background-image: url(./img/Chat\ Bot.png);">
-                            <div class="overlay">CHAT BOT</div>
-                        </div>
-                    </a>
-                    <a href="servicos.html#software-personalizado">
-                        <div class="img-port efeito-portifolio2"
-                            style="background-image: url(./img/Softwares\ personalizados.png);">
-                            <div class="overlay">SOFTWARE PERSONALIZADOS</div>
-                        </div>
-                    </a>
-                    <a href="servicos.html#ia-e-marketing">
-                        <div class="img-port efeito-portifolio3"
-                            style="background-image: url(./img/ia\ e\ marketing.png);">
-                            <div class="overlay">IA E MARKETING</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+        <section class="text-block">
+          <strong>Seus Personagens</strong>
+          <div class="gallery">
+            <!-- Adicione suas imagens aqui -->
+            <img src="./Aya.png" alt="Foto Especial">
+            <img src="./Iyo (Favorito).png" alt="Foto Especial">
+            <img src="./Kyria.png" alt="Foto Especial">
+            <img src="./Lyra.png" alt="Foto Especial">
+          </div>
         </section>
 
-        <section class="formulario">
-            <div class="interface">
-                <h2 class="titulo-edit">Fale Conosco</h2>
-                <form class="form" action="confirmacao.html">
-                    <input class="input-edit efeito-formulario1" type="text" name="" id=""
-                        placeholder="Seu nome completo:" required>
-                    <input class="input-edit efeito-formulario2" type="text" name="" id="" placeholder="Seu e-mail:"
-                        required>
-                    <input class="input-edit efeito-formulario3" type="text" name="" id="" placeholder="Seu celular:">
-                    <textarea class="textarea efeito-formulario4" name="" id="" placeholder="Sua mensagem"
-                        required></textarea>
-                    <div class="btn-enviar"><input class="input-btn efeito-formulario-btn" type="submit" value="ENVIAR">
-                    </div>
-                </form>
-            </div>
+        <section class="text-block">
+          <strong>Kridell E Kyria</strong>
+          <div class="gallery">
+            <!-- Adicione suas imagens aqui -->
+            <img src="./Kridell e Kyria 1.png" alt="Foto Especial">
+            <img src="./Kridell e Kyria 2.png" alt="Foto Especial">
+          </div>
+          <p>Será que da certo esse casal?</p>
         </section>
-    </main>
 
-    <footer class="rodape">
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img class="rodape-img-edit" src="./img/logo-rodape.png" alt="Logotipo Complai">
-                    </div>
-                    <div class="btn-social">
-                        <a class="rodape-a"
-                            href="https://www.instagram.com/compl_ai/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="><button
-                                class="btn-social-edit"><i class="bi bi-instagram"></i></button></a>
-                        <a class="rodape-a" href="https://youtube.com/@complAI-jpk55?si=9kk5pqxqst_q87gD"><button
-                                class="btn-social-edit"><i class="bi bi-youtube"></i></button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="line-footer borda"></div>
-            <div class="copy">
-                <p>&copy; 2023 Complai. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+        <section class="text-block">
+          <strong>May e Luci</strong>
+          <div class="gallery">
+            <!-- Adicione suas imagens aqui -->
+            <img src="./Adrien E Mayumi.png" alt="Foto Especial">
+            <img src="./Adrien e Mayumi 2.png" alt="Foto Especial">
+            <img src="./Adrien e Mayumi 3.png" alt="Foto Especial">
+            <img src="./Mayumi 1.png" alt="Foto Especial">
+            <img src="./Mayumi 2.png" alt="Foto Especial">
+          </div>
+        </section>
+        <br><br><br>
+        <h1>Agora a mais bela....</h1>
 
+        <section class="text-block">
+          <strong>Giih ❤️</strong>
+          <div class="gallery">
+            <!-- Adicione suas imagens aqui -->
+            <img src="./Giih 1.jpg" alt="Foto Especial">
+            <img src="./Giih 2.png" alt="Foto Especial">
+            <img src="./Giih 3.png" alt="Foto Especial">
+          </div>
+        </section>
+
+        <footer>
+          <div>Site criado com muito carinho, como presente de aniversário para Giovanna.</div>
+        </footer>
+
+      </main>
+
+    </div>
+  </div>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <div class="inner">
+      <button id="closeModal" class="btn" style="float:right">Fechar</button>
+      <img id="modalImg" alt="Imagem ampliada">
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <script>
+    const startBtn=document.getElementById('startBtn');
+    const intro=document.getElementById('intro');
+    const main=document.getElementById('main');
+    const modal=document.getElementById('modal');
+    const modalImg=document.getElementById('modalImg');
+    const closeModal=document.getElementById('closeModal');
+    const gallery=document.querySelector('.gallery');
+
+    startBtn.addEventListener('click',()=>{intro.style.display='none';main.style.display='block';});
+
+    gallery.querySelectorAll('img').forEach(img=>{
+      img.addEventListener('click',()=>openModal(img.src));
+    });
+
+    function openModal(src){modalImg.src=src;modal.style.display='flex';closeModal.focus();}
+    closeModal.addEventListener('click',()=>{modal.style.display='none';modalImg.src='';});
+    modal.addEventListener('click',e=>{if(e.target===modal){modal.style.display='none';modalImg.src='';}});
+
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.style.display==='flex'){modal.style.display='none';modalImg.src='';}});
+  </script>
 </body>
-
 </html>
